@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Particle System - Hand Gesture Control</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Three.js Canvas -->
+    <canvas id="canvas"></canvas>
+
+    
+    <video id="webcam" autoplay playsinline></video>
+
+   
+    <button id="toggleUI" class="toggle-ui-btn" title="Toggle UI (Press H)">👁️</button>
+
+  
+    <div class="ui-overlay" id="uiOverlay">
+        <div class="info-panel">
+            <h1 class="title">3D Particle System</h1>
+            <div class="status-indicator">
+                <div class="status-dot" id="statusDot"></div>
+                <span id="statusText">Initializing...</span>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <div class="control-item">
+                <span class="control-label">Current Template:</span>
+                <span class="control-value" id="templateName">Sphere</span>
+            </div>
+            <div class="control-item">
+                <span class="control-label">Particle Count:</span>
+                <span class="control-value" id="particleCount">10000</span>
+            </div>
+            <div class="control-item">
+                <span class="control-label">Expansion:</span>
+                <span class="control-value" id="expansionValue">100%</span>
+            </div>
+        </div>
+
+        <div class="gesture-guide">
+            <h3>Gesture Controls</h3>
+            <div class="gesture-item">
+                <span class="gesture-icon">🤏</span>
+                <span>Pinch/Spread - Expand/Contract</span>
+            </div>
+            <div class="gesture-item">
+                <span class="gesture-icon">✋</span>
+                <span>Hand Height - Change Color</span>
+            </div>
+            <div class="gesture-item">
+                <span class="gesture-icon">🖐️</span>
+                <span>Finger Count - Switch Template</span>
+            </div>
+            <div class="gesture-item">
+                <span class="gesture-icon">🔄</span>
+                <span>Hand Rotation - Rotate System</span>
+            </div>
+        </div>
+
+        <div class="templates-panel">
+            <h3>Available Templates</h3>
+            <div class="template-grid">
+                <div class="template-card" data-template="sphere">
+                    <div class="template-preview">⚪</div>
+                    <span>Sphere</span>
+                </div>
+                <div class="template-card" data-template="heart">
+                    <div class="template-preview">❤️</div>
+                    <span>Heart</span>
+                </div>
+                <div class="template-card" data-template="flow">
+                    <div class="template-preview">🌊</div>
+                    <span>Flow</span>
+                </div>
+                <div class="template-card" data-template="saturn">
+                    <div class="template-preview">🪐</div>
+                    <span>Saturn</span>
+                </div>
+                <div class="template-card" data-template="fireworks">
+                    <div class="template-preview">🎆</div>
+                    <span>Fireworks</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loader"></div>
+            <h2>Initializing Particle System</h2>
+            <p id="loadingText">Loading Three.js...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+
+    <script type="module" src="particleTemplates.js"></script>
+    <script type="module" src="particleSystem.js"></script>
+    <script type="module" src="handTracking.js"></script>
+    <script type="module" src="gestureController.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
