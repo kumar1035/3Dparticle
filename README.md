@@ -1,6 +1,6 @@
 # 3D Particle System - Hand Gesture Control
 
-## 🎨 New Pink-Purple UI Design
+## 🎨 New UI design
 
 The interface has been completely redesigned with an attractive **pink-purple gradient theme** featuring:
 
