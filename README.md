@@ -2,7 +2,7 @@
 
 ## 🎨 New UI design
 
-The interface has been completely redesigned with an attractive **pink-purple gradient theme** featuring:
+The interface has been completely redesigned with an attractive  featuring:
 
 - ✨ **Glowing gradient borders** with pink and purple accents
 - 🌟 **Animated shimmer effects** on hover
