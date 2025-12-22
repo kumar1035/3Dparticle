@@ -76,6 +76,4 @@ Select "Open with Live Server"
 - Use the H key for quick UI toggle during demonstrations
 - Try different templates with different hand gestures for amazing effects!
 
----
 
-**Enjoy your interactive 3D particle system! 🎉**
